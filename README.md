@@ -12,27 +12,27 @@ npm create vite@latest
 
 Steps:
 
-1. Initiate git
+1. **Initiate git**
 
 ```bash
 git init
 ```
 
-2. Install and Initiate Husky
+2. **Install and Initiate Husky**
 
 ```bash
 npm install --save-dev husky
 npx husky init
 ```
 
-3. Install and Init eslint
+3. **Install and Init eslint**
 
 ```bash
 npm install --save-dev eslint
 npm init @eslint/config@latest
 ```
 
-4. Install and configure prettier
+4. **Install and configure prettier**
 
 ```bash
 npm install --save-dev prettier
@@ -58,7 +58,7 @@ dist
 build
 ```
 
-5. Add the following eslint command scripts to the 'scripts' field of the package.json file
+5. **Add the following eslint command scripts to the 'scripts' field of the package.json file**
 
 ```json
 "lint": "eslint \"{src,apps,libs,test}/**/*.{js,jsx,ts,tsx,json}\" --fix"
@@ -70,14 +70,14 @@ or
 "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
 ```
 
-6. Add the following prettier command scripts to the same file
+6. **Add the following prettier command scripts to the same file**
 
 ```json
 "format": "prettier --write .",
 "format:check": "prettier --check ."
 ```
 
-7. Inside the generated `.husky` folder in the root directory, open the file `pre-commit` in a text editor, and paste the commands
+7. **Inside the generated `.husky` folder in the root directory, open the file `pre-commit` in a text editor, and paste the commands**
 
 ```bash
 npm run lint
