@@ -21,10 +21,19 @@ git init
 npm install --save-dev husky
 npx husky init
 ```
-
-3. Add the following command to the 'scripts' field of the package.json file
+3. Install and Init eslint
 ```bash
-"lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+npm install --save-dev eslint
+npm init @eslint/config@latest
 ```
 
-4. Inside the generated husky folder in the root directory, open the file pre-commit in a text editor, and paste the command text `npm run lint`
+4. Add the following command to the 'scripts' field of the package.json file
+```json
+"lint": "eslint \"{src,apps,libs,test}/**/*.{js,jsx,ts,tsx,json}\" --fix"
+```
+or
+```json
+"lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+```
+
+5. Inside the generated husky folder in the root directory, open the file pre-commit in a text editor, and paste the command text `npm run lint`
